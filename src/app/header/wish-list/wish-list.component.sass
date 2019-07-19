@@ -1,0 +1,26 @@
+@import "~src/sass/variables"
+@import "~src/sass/mixins"
+
+.wish_block
+  width: auto
+  text-align: center
+  vertical-align: top
+  display: inline-block
+  cursor: pointer
+  margin:
+    top: 5px
+    left: 20px
+
+  .wish_image
+    width: 25px
+    height: 25px
+
+  .wish_text
+    font-size: 21px
+    position: relative
+
+    .badge
+      @include positionA(-12px, -10px, auto, auto)
+      background: rgba($main-color, .7)
+      color: #ffffff
+      cursor: default

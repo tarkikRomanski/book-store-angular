@@ -1,0 +1,16 @@
+<article class="cart_block">
+    <div class="cart_block__top">
+        <object type="image/svg+xml" data="assets/images/cart.svg" class="cart_image">
+            <img  class="cart_image" src="assets/images/cart.svg" alt="cart">
+        </object>
+        <h3 class="cart_text">Your cart <span>{{ cartQuantity ? (cartQuantity + ' items') : 'empty!'}}</span></h3>
+    </div>
+    <div class="cart_block__bottom" *ngIf="cartQuantity">
+        <div class="cart_price">
+            $<span>{{ cartPrice | number:'1.2-2' }}</span>
+        </div>
+        <div class="cart_open_block">
+            <button class="btn btn-block btn-dark cart_open_btn">Checkout</button>
+        </div>
+    </div>
+</article>
