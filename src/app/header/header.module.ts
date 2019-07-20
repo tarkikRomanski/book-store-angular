@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "./header.component";
-import { SearchComponent } from './search/search.component';
 import { CartComponent } from './cart/cart.component';
 import { WishListComponent } from './wish-list/wish-list.component';
+import { SearchModule } from "./search/search.module";
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    SearchComponent,
     CartComponent,
-    WishListComponent
+    WishListComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SearchModule
   ],
   exports: [
     HeaderComponent

@@ -1,8 +1,13 @@
 <form class="search_form">
     <div class="input-group">
-        <input type="text" class="form-control search_text" name="search_text" id="search_text">
+        <input #search_text type="text" class="form-control search_text" (keyup)="onSearchingType(search_text.value)">
+        <div class="search_list">
+            <search-item *ngFor="let book of foundElements | async" [book]="book"></search-item>
+        </div>
         <div class="input-group-addon">
-            <button type="button" class="search_button" id="search_button"><i class="glyphicon glyphicon-search"></i> <span>Search</span></button>
+            <button type="button" class="search_button" id="search_button">
+                <i class="glyphicon glyphicon-search"></i> <span>Search</span>
+            </button>
         </div>
     </div>
 </form>
